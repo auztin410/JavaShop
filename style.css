@@ -11,3 +11,24 @@ body {
     width: 320px; 
     height: 240px;
   }
+
+.carousel {
+    height: 350px;
+    width: 350px
+}
+
+.firstImage {
+    transition: 3.5s;
+}
+
+.secondImage {
+    transition: 3.5s;
+}
+
+#fadeIn {
+    opacity: 100;
+}
+
+#fadeOut {
+    opacity: 0;
+}
