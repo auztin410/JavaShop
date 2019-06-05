@@ -1,25 +1,34 @@
-function fadeIn(c) {
-$(c).attr("id", "fadeIn");
+var arr = [".firstImage", "secondImage"];
+
+function fadeIn() {
+nextInArray(arr);
+var img = arr[0];
+console.log(img);
+$(img).attr("id", "fadeIn");
 setTimeout(() => {
-    fadeOut(c)
+    fadeOut(img)
 }, 3500);
 };
 
 function fadeOut(c) {
 $(c).attr("id", "fadeOut");
+nextInArray(arr);
 setTimeout(() => {
     fadeIn(c)
 }, 3500);
 };
 
 function nextInArray(arr) {
-console.log(arr);
 arr.push(arr.shift());
-console.log(arr);
 };
 
-$(document).ready(fadeOut(".firstImage"));
+function autoCarousel() {
+var img = arr[0];
+fadeOut(img);
+};
 
-var arr = [1,2,3,4];
+// $(document).ready(fadeOut(".firstImage"));
 
-$(document).ready(nextInArray(arr));
+
+
+$(document).ready(autoCarousel());
