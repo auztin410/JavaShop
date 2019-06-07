@@ -3,6 +3,8 @@ var c = ".firstImage";
 let i = 0;
 
 function fadeIn() {
+var img = nextInArray();
+$(".firstImage").attr("src", img);
 $(c).attr("id", "fadeIn");
 setTimeout(() => {
     fadeOut(c)
@@ -11,9 +13,6 @@ setTimeout(() => {
 
 function fadeOut() {
 $(c).attr("id", "fadeOut");
-var img = nextInArray();
-console.log(img);
-$(".firstImage").attr("src", img);
 setTimeout(() => {
     fadeIn(c)
 }, 3500);
