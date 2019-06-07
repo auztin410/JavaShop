@@ -1,30 +1,39 @@
-var arr = [".firstImage", "secondImage"];
+var arr = ["./assets/images/clear-coffee-cup.jpeg", "./assets/images/coffee-bean-pour.jpeg"];
+var c = ".firstImage";
+let i = 0;
 
 function fadeIn() {
-nextInArray(arr);
-var img = arr[0];
-console.log(img);
-$(img).attr("id", "fadeIn");
+$(c).attr("id", "fadeIn");
 setTimeout(() => {
-    fadeOut(img)
+    fadeOut(c)
 }, 3500);
 };
 
-function fadeOut(c) {
+function fadeOut() {
 $(c).attr("id", "fadeOut");
-nextInArray(arr);
+var img = nextInArray();
+console.log(img);
+$(".firstImage").attr("src", img);
 setTimeout(() => {
     fadeIn(c)
 }, 3500);
 };
 
-function nextInArray(arr) {
-arr.push(arr.shift());
+function nextInArray() {
+if(i === arr.length-1) {
+    i = 0;
+}
+else {
+    i++;
+}
+console.log(i);
+return arr[i];
 };
 
 function autoCarousel() {
 var img = arr[0];
-fadeOut(img);
+$(".firstImage").attr("src", img);
+fadeOut();
 };
 
 // $(document).ready(fadeOut(".firstImage"));
