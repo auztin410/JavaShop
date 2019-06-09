@@ -18,15 +18,19 @@ body {
 }
 
 .firstImage {
-    /* transition: 3.5s; */
+    transition: 3.5s;
 }
 
 #fadeIn {
     opacity: 100;
-    transition: 3.5s;
+    /* transition: 3.5s; */
 }
 
 #fadeOut {
     opacity: 0;
-    transition: 3.5s;
+    /* transition: 3.5s; */
+}
+
+.video {
+    margin: 0 auto;
 }

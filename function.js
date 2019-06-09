@@ -30,12 +30,14 @@ return arr[i];
 };
 
 function autoCarousel() {
-var img = arr[0];
-$(".firstImage").attr("src", img);
-fadeOut();
-};
+    $(c).attr("id", "fadeIn");
+    setTimeout(() => {
+    var img = arr[0];
+    $(".firstImage").attr("src", img);
+    fadeOut();
+    }, 3500);
 
-// $(document).ready(fadeOut(".firstImage"));
+};
 
 
 
