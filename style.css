@@ -66,3 +66,30 @@ body {
     color: #342A21;
     font-weight: bolder;
 }
+
+/* Grid Box */
+
+.grid-box {
+    margin-top: 15px;
+    display: grid;
+    grid-auto-columns: auto auto auto;
+    grid-gap: 5px;
+}
+
+.box {
+    /* width: 33%; */
+    height: 200px;
+    border: 2px black solid;
+}
+
+.one {
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.two {
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.three {
+    grid-area: 1 / 3 / span 1 / span 1;
+}
